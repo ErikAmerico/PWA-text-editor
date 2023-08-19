@@ -19,6 +19,7 @@ butInstall.addEventListener('click', async () => {
     promptEvent.prompt();
 
     const result = await promptEvent.userChoice;
+    
     if (result.outcome === 'accepted') {
         console.log('PWA setup accepted');
     } else {
@@ -27,7 +28,7 @@ butInstall.addEventListener('click', async () => {
 
     window.deferredPrompt = null;
 
-    butInstall.classList.toggle('hidden', true);
+    butInstall.classList.toggle('hidden', false);
 
 });
 
